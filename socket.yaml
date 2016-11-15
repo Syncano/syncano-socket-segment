@@ -16,10 +16,6 @@ endpoints:
       script: add_user
 
   send_event:
-    GET:
-      script: send_event
-
-  send_event:
     POST:
       script: send_event
 
