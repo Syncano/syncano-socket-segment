@@ -19,6 +19,12 @@ endpoints:
     POST:
       script: send_event
 
+triggers: 
+  add-user:
+    class: user_profile
+    signal: post_create
+    script: add_user
+
 dependencies:
   scripts:
     add_user:
@@ -31,8 +37,3 @@ dependencies:
       file: scripts/send_event.py
       description: Sending information about user event to Segment.
 
-  triggers: 
-    add-user:
-      class: user_profile
-      signal: post_create
-      script: add_user
