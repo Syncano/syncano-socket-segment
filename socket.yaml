@@ -5,11 +5,6 @@ author:
   name: Syncano
   email: hello@syncano.io
 
-config:
-    name: SEGMENT_WRITE_KEY
-    description: Segment write key
-    type: string
-
 endpoints:
   identify_user:
     GET:
