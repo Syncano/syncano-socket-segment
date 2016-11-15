@@ -1,0 +1,41 @@
+name: segment
+description: This solution lets you identify users and send events to Segment.com
+
+author:
+  name: Syncano
+  email: hello@syncano.io
+
+config:
+  - name: SEGMENT_WRITE_KEY
+    description: Segment write key
+    type: string
+
+endpoints:
+  add_user:
+    GET:
+      script: add_user
+
+  send_event:
+    GET:
+      script: send_event
+
+  send_event:
+    POST:
+      script: send_event
+
+dependencies:
+  scripts:
+    add_user:
+      runtime_name: python_library_v5.0
+      file: scripts/add_user.py
+      description: Sending info about user to Segment after user registration.
+
+    send_event:
+      runtime_name: python_library_v5.0
+      file: scripts/send_event.py
+      description: Sending information about user event to Segment.
+
+  triggers: 
+    add-user:
+      class: user_profile
+      signal: post_create
