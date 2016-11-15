@@ -1,10 +1,13 @@
 var Segment = require('machinepack-segment');
 
+var userID = ARGS.GET['userID'];
+var event = ARGS.GET['event'];
+
 // Track a user action by triggering an event in Segment.
 Segment.track({
   writeKey: 'KZemN7saUWWoHz12T7dgaWBu4wWlJpTY',
-  userId: '019mr8mf4r',
-  event: 'foobarbaz',
+  userId: userID,
+  event: event,
   properties: {},
   integrations: {},
 }).exec({

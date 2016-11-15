@@ -24,7 +24,7 @@ dependencies:
     add_user:
       runtime_name: nodejs_library_v1.0
       file: scripts/identify_user.js
-      description: Sending info about user to Segment.io after user registration
+      description: Identifying user on Segment.io
 
     send_event:
       runtime_name: nodejs_library_v1.0
