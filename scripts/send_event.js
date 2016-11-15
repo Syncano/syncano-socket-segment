@@ -5,7 +5,7 @@ var event = ARGS.GET['event'];
 
 // Track a user action by triggering an event in Segment.
 Segment.track({
-  writeKey: 'KZemN7saUWWoHz12T7dgaWBu4wWlJpTY',
+  writeKey: '<YOUR_SEGMENT_WRITE_KEY>',
   userId: userID,
   event: event,
   properties: {},

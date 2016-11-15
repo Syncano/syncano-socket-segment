@@ -4,7 +4,7 @@ var userID = ARGS.GET['userID'];
 
 // Identify a user by her unique id and a set of associated traits.
 Segment.identify({
-  writeKey: 'KZemN7saUWWoHz12T7dgaWBu4wWlJpTY',
+  writeKey: '<YOUR_SEGMENT_WRITE_KEY>',
   userId: userID,
   traits: {},
   integrations: {},
