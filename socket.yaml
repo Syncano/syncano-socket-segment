@@ -11,29 +11,22 @@ config:
     type: string
 
 endpoints:
-  add_user:
+  identify_user:
     GET:
-      script: add_user
+      script: identify_user
 
   send_event:
     POST:
       script: send_event
 
-triggers: 
-  add-user:
-    class: user_profile
-    signal: post_create
-    script: add_user
-
 dependencies:
   scripts:
     add_user:
-      runtime_name: python_library_v5.0
-      file: scripts/add_user.py
-      description: Sending info about user to Segment after user registration.
+      runtime_name: nodejs_library_v1.0
+      file: scripts/identify_user.js
+      description: Sending info about user to Segment.io after user registration
 
     send_event:
-      runtime_name: python_library_v5.0
-      file: scripts/send_event.py
-      description: Sending information about user event to Segment.
-
+      runtime_name: nodejs_library_v1.0
+      file: scripts/send_event.js
+      description: Sending information about user event to Segment.io

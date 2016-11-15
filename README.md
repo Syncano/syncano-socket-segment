@@ -1,4 +1,12 @@
-Segment Integration - Syncano Socket
+# Segment Integration - Syncano Socket
 
-In this example the mailgun integration is provided. Two endpoints are defined in one single Custom Socket. One allows to send emails, second - obtain basic statistics.
-This solution lets you identify users and send events to Segment.com
+In this socket the Segment.io integration is provided. You can use two endpoints. First endpoint allows to identify user on Segment.io and the second - send user behaviour (event) to Segment.io
+
+### Avaliable Socket methods:
+
+- `GET` - `identify_user` - Identifying user on Segment.io ( required parameter: `userID`)
+- `POST` - `send_event` - Sending information about user event to Segment.io ( required parameters: `userID` and `event`)
+
+License
+----
+MIT
