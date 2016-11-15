@@ -39,3 +39,4 @@ dependencies:
     add-user:
       class: user_profile
       signal: post_create
+      script: add_user
