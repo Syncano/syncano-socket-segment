@@ -12,11 +12,11 @@ Segment.track({
   integrations: {},
 }).exec({
   // An unexpected error occurred
-  error: function (error){
-    console.error(error);
+  error: function (){
+
   },
   // Success
-  success: function (response){
-    console.log(response);
+  success: function (){
+    console.log('Success');
   }
 });

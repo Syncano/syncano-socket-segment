@@ -11,10 +11,10 @@ Segment.identify({
 }).exec({
   // An unexpected error occurred
   error: function (error){
-    console.error(error);
+
   },
   // Success
-  success: function (response){
-    console.log(response);
+  success: function (){
+    console.log('Success');
   }
 });
