@@ -1,6 +1,6 @@
 var Segment = require('machinepack-segment');
 
-var userID = ARGS.GET['userID'];
+var userID = ARGS['userID'];
 
 // Identify a user by her unique id and a set of associated traits.
 Segment.identify({
