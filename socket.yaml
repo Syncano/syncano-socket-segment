@@ -16,7 +16,7 @@ endpoints:
 
 dependencies:
   scripts:
-    add_user:
+    identify_user:
       runtime_name: nodejs_library_v1.0
       file: scripts/identify_user.js
       description: Identifying user on Segment.io
